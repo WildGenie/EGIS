@@ -1,0 +1,617 @@
+2014-11-21 21:04:15.6825 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.6825 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:04:15.6825 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2014-11-21 21:04:15.6945 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2014-11-21 21:04:15.6945 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.6945 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:15.6945 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.6945 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2014-11-21 21:04:15.6945 Trace  Scanning SimpleLayout ''''
+2014-11-21 21:04:15.6945 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:15.6945 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.7095 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2014-11-21 21:04:15.7095 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.7095 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:04:15.7095 Debug Setting 'FileTarget.name' to 'TWCFEbus'
+2014-11-21 21:04:15.7095 Debug Setting 'FileTarget.fileName' to '${basedir}/logs/${shortdate}/TWCF-E-BusServer.log'
+2014-11-21 21:04:15.7095 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.7245 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:04:15.7245 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.7245 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:04:15.7245 Debug Setting 'FileTarget.layout' to '${date:universalTime=true:format=u} | ${level} | ${machinename} | ${aspnet-user-identity} | ${message} | ${stacktrace:format=Flat:topFrames=4:separator=|}'
+2014-11-21 21:04:15.7245 Debug Setting 'DateLayoutRenderer.universalTime' to 'true'
+2014-11-21 21:04:15.7245 Debug Setting 'DateLayoutRenderer.format' to 'u'
+2014-11-21 21:04:15.7245 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.7395 Trace Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2014-11-21 21:04:15.7395 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.7395 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:15.7395 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.7395 Trace Scanning MachineNameLayoutRenderer 'Layout Renderer: ${machinename}'
+2014-11-21 21:04:15.7625 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.7625 Trace Scanning AspNetUserIdentityLayoutRenderer 'Layout Renderer: ${aspnet-user-identity}'
+2014-11-21 21:04:15.7625 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.7625 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:04:15.7625 Debug Setting 'StackTraceLayoutRenderer.format' to 'Flat'
+2014-11-21 21:04:15.7715 Debug Setting 'StackTraceLayoutRenderer.topFrames' to '4'
+2014-11-21 21:04:15.7715 Debug Setting 'StackTraceLayoutRenderer.separator' to '|'
+2014-11-21 21:04:15.7715 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.7715 Trace Scanning StackTraceLayoutRenderer 'Layout Renderer: ${stacktrace}'
+2014-11-21 21:04:15.7715 Debug Setting 'FileTarget.concurrentWrites' to 'true'
+2014-11-21 21:04:15.7715 Debug Setting 'FileTarget.archiveFileName' to '${basedir}/logs/${shortdate}/${level}{#####}.log'
+2014-11-21 21:04:15.7715 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.7875 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:04:15.7875 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.7875 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:04:15.7875 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.7875 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:15.7875 Debug Setting 'FileTarget.archiveAboveSize' to '10240'
+2014-11-21 21:04:15.7875 Debug Setting 'FileTarget.archiveNumbering' to 'Sequence'
+2014-11-21 21:04:15.8035 Debug Wrapping target 'TWCFEbus' with AsyncTargetWrapper and renaming to 'TWCFEbus_wrapped
+2014-11-21 21:04:15.8035 Info Adding target AsyncWrapper Target[TWCFEbus](File Target[TWCFEbus_wrapped])
+2014-11-21 21:04:15.8035 Debug Registering target TWCFEbus: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:04:15.8035 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.8035 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:04:15.8035 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2014-11-21 21:04:15.8035 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2014-11-21 21:04:15.8185 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.8185 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:15.8185 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.8185 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2014-11-21 21:04:15.8185 Trace  Scanning SimpleLayout ''''
+2014-11-21 21:04:15.8185 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:15.8185 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.8345 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2014-11-21 21:04:15.8345 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.8345 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:04:15.8345 Debug Setting 'FileTarget.name' to 'fileTarget-Simple'
+2014-11-21 21:04:15.8345 Debug Setting 'FileTarget.fileName' to '${basedir}/logs/${shortdate}/E-BusServer.log'
+2014-11-21 21:04:15.8345 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.8345 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:04:15.8515 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.8515 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:04:15.8515 Debug Setting 'FileTarget.layout' to '${level} ${longdate} ${message}'
+2014-11-21 21:04:15.8515 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.8515 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:15.8645 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.8645 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:04:15.8645 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.8645 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:04:15.8645 Debug Setting 'FileTarget.concurrentWrites' to 'true'
+2014-11-21 21:04:15.8645 Debug Setting 'FileTarget.archiveFileName' to '${basedir}/logs/${shortdate}/${level}{#####}.log'
+2014-11-21 21:04:15.8825 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.8825 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:04:15.8825 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.8825 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:04:15.8825 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.8965 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:15.8965 Debug Setting 'FileTarget.archiveAboveSize' to '10240'
+2014-11-21 21:04:15.8965 Debug Setting 'FileTarget.archiveNumbering' to 'Sequence'
+2014-11-21 21:04:15.8965 Debug Wrapping target 'fileTarget-Simple' with AsyncTargetWrapper and renaming to 'fileTarget-Simple_wrapped
+2014-11-21 21:04:15.8965 Info Adding target AsyncWrapper Target[fileTarget-Simple](File Target[fileTarget-Simple_wrapped])
+2014-11-21 21:04:15.8965 Debug Registering target fileTarget-Simple: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:04:15.8965 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.9115 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:04:15.9115 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2014-11-21 21:04:15.9115 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2014-11-21 21:04:15.9115 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.9115 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:15.9115 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.9115 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2014-11-21 21:04:15.9275 Trace  Scanning SimpleLayout ''''
+2014-11-21 21:04:15.9275 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:15.9275 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.9275 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2014-11-21 21:04:15.9275 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.9275 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:04:15.9275 Debug Setting 'FileTarget.name' to 'fileTarget-Detail'
+2014-11-21 21:04:15.9435 Debug Setting 'FileTarget.fileName' to '${basedir}/logs/${shortdate}/E-BusServer(Detail).log'
+2014-11-21 21:04:15.9435 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.9435 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:04:15.9435 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.9435 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:04:15.9435 Debug Setting 'FileTarget.layout' to '${level} ${longdate} ${machinename} ${message}'
+2014-11-21 21:04:15.9435 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.9615 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:15.9615 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.9615 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:04:15.9615 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.9615 Trace Scanning MachineNameLayoutRenderer 'Layout Renderer: ${machinename}'
+2014-11-21 21:04:15.9615 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.9745 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:04:15.9745 Debug Setting 'FileTarget.concurrentWrites' to 'true'
+2014-11-21 21:04:15.9745 Debug Setting 'FileTarget.archiveFileName' to '${basedir}/logs/${shortdate}/${level}{#####}.log'
+2014-11-21 21:04:15.9745 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.9745 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:04:15.9745 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.9895 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:04:15.9895 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:15.9895 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:15.9895 Debug Setting 'FileTarget.archiveAboveSize' to '10240'
+2014-11-21 21:04:15.9895 Debug Setting 'FileTarget.archiveNumbering' to 'Sequence'
+2014-11-21 21:04:15.9895 Debug Wrapping target 'fileTarget-Detail' with AsyncTargetWrapper and renaming to 'fileTarget-Detail_wrapped
+2014-11-21 21:04:15.9895 Info Adding target AsyncWrapper Target[fileTarget-Detail](File Target[fileTarget-Detail_wrapped])
+2014-11-21 21:04:15.9895 Debug Registering target fileTarget-Detail: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:04:16.0075 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0075 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:04:16.0075 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2014-11-21 21:04:16.0075 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2014-11-21 21:04:16.0075 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0075 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:16.0215 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0215 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2014-11-21 21:04:16.0215 Trace  Scanning SimpleLayout ''''
+2014-11-21 21:04:16.0215 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:16.0215 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0215 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2014-11-21 21:04:16.0215 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0375 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:04:16.0375 Debug Setting 'FileTarget.name' to 'fileTarget-FatalDetail'
+2014-11-21 21:04:16.0375 Debug Setting 'FileTarget.fileName' to '${basedir}/logs/${shortdate}/E-BusServer.log'
+2014-11-21 21:04:16.0375 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0375 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:04:16.0515 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0515 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:04:16.0515 Debug Setting 'FileTarget.layout' to '${level} ${longdate} ${message} ${event-context:item=requestType} ${event-context:item=requestUrl} ${event-context:item=requestQuerystring} ${event-context:item=requestStatus} ${event-context:item=message}'
+2014-11-21 21:04:16.0515 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0515 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:16.0515 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0515 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:04:16.0675 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0675 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:04:16.0675 Debug Setting 'EventContextLayoutRenderer.item' to 'requestType'
+2014-11-21 21:04:16.0675 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0675 Trace Scanning EventContextLayoutRenderer 'Layout Renderer: ${event-context}'
+2014-11-21 21:04:16.0675 Debug Setting 'EventContextLayoutRenderer.item' to 'requestUrl'
+2014-11-21 21:04:16.0675 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0675 Trace Scanning EventContextLayoutRenderer 'Layout Renderer: ${event-context}'
+2014-11-21 21:04:16.0855 Debug Setting 'EventContextLayoutRenderer.item' to 'requestQuerystring'
+2014-11-21 21:04:16.0855 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0855 Trace Scanning EventContextLayoutRenderer 'Layout Renderer: ${event-context}'
+2014-11-21 21:04:16.0855 Debug Setting 'EventContextLayoutRenderer.item' to 'requestStatus'
+2014-11-21 21:04:16.0855 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0855 Trace Scanning EventContextLayoutRenderer 'Layout Renderer: ${event-context}'
+2014-11-21 21:04:16.0985 Debug Setting 'EventContextLayoutRenderer.item' to 'message'
+2014-11-21 21:04:16.0985 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0985 Trace Scanning EventContextLayoutRenderer 'Layout Renderer: ${event-context}'
+2014-11-21 21:04:16.0985 Debug Setting 'FileTarget.concurrentWrites' to 'true'
+2014-11-21 21:04:16.0985 Debug Setting 'FileTarget.archiveFileName' to '${basedir}/logs/${shortdate}/${level}{#####}.log'
+2014-11-21 21:04:16.0985 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.0985 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:04:16.1145 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.1145 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:04:16.1145 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.1145 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:16.1145 Debug Setting 'FileTarget.archiveAboveSize' to '10240'
+2014-11-21 21:04:16.1145 Debug Setting 'FileTarget.archiveNumbering' to 'Sequence'
+2014-11-21 21:04:16.1145 Debug Wrapping target 'fileTarget-FatalDetail' with AsyncTargetWrapper and renaming to 'fileTarget-FatalDetail_wrapped
+2014-11-21 21:04:16.1295 Info Adding target AsyncWrapper Target[fileTarget-FatalDetail](File Target[fileTarget-FatalDetail_wrapped])
+2014-11-21 21:04:16.1295 Debug Registering target fileTarget-FatalDetail: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:04:16.1295 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.1295 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:04:16.1295 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2014-11-21 21:04:16.1295 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2014-11-21 21:04:16.1295 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.1295 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:16.1475 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.1475 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2014-11-21 21:04:16.1475 Trace  Scanning SimpleLayout ''''
+2014-11-21 21:04:16.1475 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:16.1475 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.1475 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2014-11-21 21:04:16.1475 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.1615 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:04:16.1615 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.1615 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:04:16.1615 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.1615 Trace Scanning NewLineLayoutRenderer 'Layout Renderer: ${newline}'
+2014-11-21 21:04:16.1615 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.1615 Trace Scanning MachineNameLayoutRenderer 'Layout Renderer: ${machinename}'
+2014-11-21 21:04:16.1775 Debug Setting 'MailTarget.name' to 'gmail'
+2014-11-21 21:04:16.1775 Debug Setting 'MailTarget.smtpServer' to 'smtp.gmail.com'
+2014-11-21 21:04:16.1775 Debug Setting 'MailTarget.smtpPort' to '587'
+2014-11-21 21:04:16.1775 Debug Setting 'MailTarget.smtpAuthentication' to 'Basic'
+2014-11-21 21:04:16.1775 Debug Setting 'MailTarget.smtpUsername' to 'tagRameshS@gmail.com'
+2014-11-21 21:04:16.1775 Debug Setting 'MailTarget.smtpPassword' to 'password'
+2014-11-21 21:04:16.1775 Debug Setting 'MailTarget.enableSsl' to 'true'
+2014-11-21 21:04:16.1935 Debug Setting 'MailTarget.from' to 'tagRameshS@gmail.com'
+2014-11-21 21:04:16.1935 Debug Setting 'MailTarget.to' to 'rsubramanian@gfnet.com'
+2014-11-21 21:04:16.1935 Debug Setting 'MailTarget.cc' to 'rsubramanian@geodecisions.com'
+2014-11-21 21:04:16.1935 Debug Wrapping target 'gmail' with AsyncTargetWrapper and renaming to 'gmail_wrapped
+2014-11-21 21:04:16.1935 Info Adding target AsyncWrapper Target[gmail](Mail Target[gmail_wrapped])
+2014-11-21 21:04:16.1935 Debug Registering target gmail: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:04:16.1935 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.2095 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:04:16.2095 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2014-11-21 21:04:16.2095 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2014-11-21 21:04:16.2095 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.2095 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:16.2095 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.2095 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2014-11-21 21:04:16.2245 Trace  Scanning SimpleLayout ''''
+2014-11-21 21:04:16.2245 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:16.2245 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.2245 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2014-11-21 21:04:16.2245 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.2245 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:04:16.2245 Debug Setting 'EventLogTarget.name' to 'event1'
+2014-11-21 21:04:16.2405 Debug Setting 'EventLogTarget.layout' to '${level} ${longdate} ${machinename} ${message}'
+2014-11-21 21:04:16.2405 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.2405 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:16.2405 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.2405 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:04:16.2405 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.2545 Trace Scanning MachineNameLayoutRenderer 'Layout Renderer: ${machinename}'
+2014-11-21 21:04:16.2545 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.2545 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:04:16.2545 Debug Wrapping target 'event1' with AsyncTargetWrapper and renaming to 'event1_wrapped
+2014-11-21 21:04:16.2545 Info Adding target AsyncWrapper Target[event1](EventLog Target[event1_wrapped])
+2014-11-21 21:04:16.2545 Debug Registering target event1: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:04:16.2545 Debug Setting 'WebServiceTarget.name' to 'wcf2'
+2014-11-21 21:04:16.2706 Debug Setting 'WebServiceTarget.url' to 'http://localhost:8733'
+2014-11-21 21:04:16.2706 Debug Setting 'WebServiceTarget.Protocol' to 'HttpGet'
+2014-11-21 21:04:16.2706 Debug Setting 'WebServiceTarget.methodName' to 'WelcomeAndPublish'
+2014-11-21 21:04:16.2706 Debug Setting 'MethodCallParameter.layout' to '${level}-Subramanian'
+2014-11-21 21:04:16.2706 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.2706 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:16.2856 Debug Setting 'MethodCallParameter.name' to 'value'
+2014-11-21 21:04:16.2856 Debug Wrapping target 'wcf2' with AsyncTargetWrapper and renaming to 'wcf2_wrapped
+2014-11-21 21:04:16.2856 Info Adding target AsyncWrapper Target[wcf2](WebService Target[wcf2_wrapped])
+2014-11-21 21:04:16.2856 Debug Registering target wcf2: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:04:16.2856 Debug Setting 'WebServiceTarget.name' to 'wcf1'
+2014-11-21 21:04:16.2856 Debug Setting 'WebServiceTarget.url' to 'http://localhost:58631/Service1.svc'
+2014-11-21 21:04:16.2856 Debug Setting 'WebServiceTarget.Protocol' to 'HttpGet'
+2014-11-21 21:04:16.3026 Debug Setting 'WebServiceTarget.methodName' to 'redis'
+2014-11-21 21:04:16.3026 Debug Setting 'MethodCallParameter.layout' to '${level}-Subramanian'
+2014-11-21 21:04:16.3026 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:04:16.3026 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:16.3026 Debug Setting 'MethodCallParameter.name' to 'name'
+2014-11-21 21:04:16.3026 Debug Wrapping target 'wcf1' with AsyncTargetWrapper and renaming to 'wcf1_wrapped
+2014-11-21 21:04:16.3026 Info Adding target AsyncWrapper Target[wcf1](WebService Target[wcf1_wrapped])
+2014-11-21 21:04:16.3186 Debug Registering target wcf1: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:04:16.3186 Trace ParseRulesElement
+2014-11-21 21:04:16.3186 Info Configured from an XML element in C:\GeoDecisions\EnterpriseServiceBus\Projects\Military\EGIS\EnterpriseServiceBus\Server.Host\bin\Debug\NLog.config...
+2014-11-21 21:04:16.3186 Debug --- NLog configuration dump. ---
+2014-11-21 21:04:16.3326 Debug Targets:
+2014-11-21 21:04:16.3326 Info AsyncWrapper Target[TWCFEbus](File Target[TWCFEbus_wrapped])
+2014-11-21 21:04:16.3326 Info AsyncWrapper Target[fileTarget-Simple](File Target[fileTarget-Simple_wrapped])
+2014-11-21 21:04:16.3326 Info AsyncWrapper Target[fileTarget-Detail](File Target[fileTarget-Detail_wrapped])
+2014-11-21 21:04:16.3326 Info AsyncWrapper Target[fileTarget-FatalDetail](File Target[fileTarget-FatalDetail_wrapped])
+2014-11-21 21:04:16.3326 Info AsyncWrapper Target[gmail](Mail Target[gmail_wrapped])
+2014-11-21 21:04:16.3326 Info AsyncWrapper Target[event1](EventLog Target[event1_wrapped])
+2014-11-21 21:04:16.3506 Info AsyncWrapper Target[wcf2](WebService Target[wcf2_wrapped])
+2014-11-21 21:04:16.3506 Info AsyncWrapper Target[wcf1](WebService Target[wcf1_wrapped])
+2014-11-21 21:04:16.3506 Debug Rules:
+2014-11-21 21:04:17.1946 Info logNamePattern: (GeoDecisions.Esb.Server.:StartsWith) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ wcf2 ]
+2014-11-21 21:04:17.1946 Info logNamePattern: (GeoDecisions.Esb.Server.:StartsWith) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ TWCFEbus ]
+2014-11-21 21:04:17.1946 Info logNamePattern: (GeoDecisions.Esb.Server.:StartsWith) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ fileTarget-Simple ]
+2014-11-21 21:04:17.1946 Info logNamePattern: (GeoDecisions.Esb.Server.:StartsWith) levels: [ ] appendTo: [ fileTarget-Detail ]
+2014-11-21 21:04:17.2106 Info logNamePattern: (:All) levels: [ ] appendTo: [ fileTarget-FatalDetail ]
+2014-11-21 21:04:17.2106 Debug --- End of NLog configuration dump ---
+2014-11-21 21:04:17.2106 Info Watching path 'C:\GeoDecisions\EnterpriseServiceBus\Projects\Military\EGIS\EnterpriseServiceBus\Server.Host\bin\Debug' filter 'NLog.config' for changes.
+2014-11-21 21:04:48.9464 Trace FindReachableObject<System.Object>:
+2014-11-21 21:04:48.9574 Trace Scanning LoggingRule 'logNamePattern: (GeoDecisions.Esb.Server.:StartsWith) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ wcf2 ]'
+2014-11-21 21:04:48.9574 Trace  Scanning AsyncTargetWrapper 'AsyncWrapper Target[wcf2](WebService Target[wcf2_wrapped])'
+2014-11-21 21:04:48.9574 Trace   Scanning WebServiceTarget 'WebService Target[wcf2_wrapped]'
+2014-11-21 21:04:48.9574 Trace    Scanning MethodCallParameter 'NLog.Targets.MethodCallParameter'
+2014-11-21 21:04:50.6405 Trace     Scanning SimpleLayout ''${level}-Subramanian''
+2014-11-21 21:04:50.6405 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:50.6405 Trace      Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2014-11-21 21:04:50.6405 Trace Scanning LoggingRule 'logNamePattern: (GeoDecisions.Esb.Server.:StartsWith) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ TWCFEbus ]'
+2014-11-21 21:04:50.6525 Trace  Scanning AsyncTargetWrapper 'AsyncWrapper Target[TWCFEbus](File Target[TWCFEbus_wrapped])'
+2014-11-21 21:04:50.6525 Trace   Scanning FileTarget 'File Target[TWCFEbus_wrapped]'
+2014-11-21 21:04:50.6525 Trace    Scanning SimpleLayout ''${basedir}/logs/${shortdate}/TWCF-E-BusServer.log''
+2014-11-21 21:04:50.6525 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2014-11-21 21:04:53.8917 Trace     Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:04:53.8917 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2014-11-21 21:04:53.8977 Trace    Scanning SimpleLayout ''${basedir}/logs/${shortdate}/${level}{#####}.log''
+2014-11-21 21:04:53.8977 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2014-11-21 21:04:53.8977 Trace     Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:04:53.8977 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2014-11-21 21:04:53.8977 Trace     Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:53.9147 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2014-11-21 21:04:53.9147 Trace    Scanning SimpleLayout ''${date:universalTime=true:format=u} | ${level} | ${machinename} | ${aspnet-user-identity} | ${message} | ${stacktrace:format=Flat:topFrames=4:separator=|}''
+2014-11-21 21:04:53.9147 Trace     Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2014-11-21 21:04:53.9147 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2014-11-21 21:04:53.9147 Trace     Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:04:53.9147 Trace     Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2014-11-21 21:05:54.2742 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.2742 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:05:54.2742 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2014-11-21 21:05:54.2872 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2014-11-21 21:05:54.2872 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.2872 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.2872 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.2872 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2014-11-21 21:05:54.2872 Trace  Scanning SimpleLayout ''''
+2014-11-21 21:05:54.3022 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.3022 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.3022 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2014-11-21 21:05:54.3022 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.3022 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:05:54.3172 Debug Setting 'FileTarget.name' to 'TWCFEbus'
+2014-11-21 21:05:54.3172 Debug Setting 'FileTarget.fileName' to '${basedir}/logs/${shortdate}/TWCF-E-BusServer.log'
+2014-11-21 21:05:54.3172 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.3172 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:05:54.3172 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.3332 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:05:54.3332 Debug Setting 'FileTarget.layout' to '${date:universalTime=true:format=u} | ${level} | ${machinename} | ${aspnet-user-identity} | ${message} | ${stacktrace:format=Flat:topFrames=4:separator=|}'
+2014-11-21 21:05:54.3332 Debug Setting 'DateLayoutRenderer.universalTime' to 'true'
+2014-11-21 21:05:54.3332 Debug Setting 'DateLayoutRenderer.format' to 'u'
+2014-11-21 21:05:54.3332 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.3332 Trace Scanning DateLayoutRenderer 'Layout Renderer: ${date}'
+2014-11-21 21:05:54.3332 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.3482 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.3482 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.3482 Trace Scanning MachineNameLayoutRenderer 'Layout Renderer: ${machinename}'
+2014-11-21 21:05:54.3482 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.3482 Trace Scanning AspNetUserIdentityLayoutRenderer 'Layout Renderer: ${aspnet-user-identity}'
+2014-11-21 21:05:54.3652 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.3652 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:05:54.3652 Debug Setting 'StackTraceLayoutRenderer.format' to 'Flat'
+2014-11-21 21:05:54.3652 Debug Setting 'StackTraceLayoutRenderer.topFrames' to '4'
+2014-11-21 21:05:54.3652 Debug Setting 'StackTraceLayoutRenderer.separator' to '|'
+2014-11-21 21:05:54.3652 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.3792 Trace Scanning StackTraceLayoutRenderer 'Layout Renderer: ${stacktrace}'
+2014-11-21 21:05:54.3792 Debug Setting 'FileTarget.concurrentWrites' to 'true'
+2014-11-21 21:05:54.3792 Debug Setting 'FileTarget.archiveFileName' to '${basedir}/logs/${shortdate}/${level}{#####}.log'
+2014-11-21 21:05:54.3792 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.3792 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:05:54.3792 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.3792 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:05:54.3952 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.3952 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.3952 Debug Setting 'FileTarget.archiveAboveSize' to '10240'
+2014-11-21 21:05:54.3952 Debug Setting 'FileTarget.archiveNumbering' to 'Sequence'
+2014-11-21 21:05:54.3952 Debug Wrapping target 'TWCFEbus' with AsyncTargetWrapper and renaming to 'TWCFEbus_wrapped
+2014-11-21 21:05:54.4102 Info Adding target AsyncWrapper Target[TWCFEbus](File Target[TWCFEbus_wrapped])
+2014-11-21 21:05:54.4102 Debug Registering target TWCFEbus: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:05:54.4102 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.4102 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:05:54.4102 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2014-11-21 21:05:54.4102 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2014-11-21 21:05:54.4102 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.4262 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.4262 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.4262 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2014-11-21 21:05:54.4262 Trace  Scanning SimpleLayout ''''
+2014-11-21 21:05:54.4262 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.4262 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.4262 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2014-11-21 21:05:54.4422 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.4422 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:05:54.4422 Debug Setting 'FileTarget.name' to 'fileTarget-Simple'
+2014-11-21 21:05:54.4422 Debug Setting 'FileTarget.fileName' to '${basedir}/logs/${shortdate}/E-BusServer.log'
+2014-11-21 21:05:54.4422 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.4422 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:05:54.4422 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.4592 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:05:54.4592 Debug Setting 'FileTarget.layout' to '${level} ${longdate} ${message}'
+2014-11-21 21:05:54.4592 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.4592 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.4592 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.4592 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:05:54.4592 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.4742 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:05:54.4742 Debug Setting 'FileTarget.concurrentWrites' to 'true'
+2014-11-21 21:05:54.4742 Debug Setting 'FileTarget.archiveFileName' to '${basedir}/logs/${shortdate}/${level}{#####}.log'
+2014-11-21 21:05:54.4742 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.4742 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:05:54.4742 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.4742 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:05:54.4902 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.4902 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.4902 Debug Setting 'FileTarget.archiveAboveSize' to '10240'
+2014-11-21 21:05:54.4902 Debug Setting 'FileTarget.archiveNumbering' to 'Sequence'
+2014-11-21 21:05:54.4902 Debug Wrapping target 'fileTarget-Simple' with AsyncTargetWrapper and renaming to 'fileTarget-Simple_wrapped
+2014-11-21 21:05:54.4902 Info Adding target AsyncWrapper Target[fileTarget-Simple](File Target[fileTarget-Simple_wrapped])
+2014-11-21 21:05:54.5052 Debug Registering target fileTarget-Simple: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:05:54.5052 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.5052 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:05:54.5052 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2014-11-21 21:05:54.5052 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2014-11-21 21:05:54.5052 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.5052 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.5212 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.5212 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2014-11-21 21:05:54.5212 Trace  Scanning SimpleLayout ''''
+2014-11-21 21:05:54.5212 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.5212 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.5212 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2014-11-21 21:05:54.5352 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.5352 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:05:54.5352 Debug Setting 'FileTarget.name' to 'fileTarget-Detail'
+2014-11-21 21:05:54.5352 Debug Setting 'FileTarget.fileName' to '${basedir}/logs/${shortdate}/E-BusServer(Detail).log'
+2014-11-21 21:05:54.5352 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.5352 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:05:54.5352 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.5522 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:05:54.5522 Debug Setting 'FileTarget.layout' to '${level} ${longdate} ${machinename} ${message}'
+2014-11-21 21:05:54.5522 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.5522 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.5522 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.5522 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:05:54.5672 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.5672 Trace Scanning MachineNameLayoutRenderer 'Layout Renderer: ${machinename}'
+2014-11-21 21:05:54.5672 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.5672 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:05:54.5672 Debug Setting 'FileTarget.concurrentWrites' to 'true'
+2014-11-21 21:05:54.5672 Debug Setting 'FileTarget.archiveFileName' to '${basedir}/logs/${shortdate}/${level}{#####}.log'
+2014-11-21 21:05:54.5672 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.5832 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:05:54.5832 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.5832 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:05:54.5832 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.5832 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.5832 Debug Setting 'FileTarget.archiveAboveSize' to '10240'
+2014-11-21 21:05:54.5832 Debug Setting 'FileTarget.archiveNumbering' to 'Sequence'
+2014-11-21 21:05:54.5982 Debug Wrapping target 'fileTarget-Detail' with AsyncTargetWrapper and renaming to 'fileTarget-Detail_wrapped
+2014-11-21 21:05:54.5982 Info Adding target AsyncWrapper Target[fileTarget-Detail](File Target[fileTarget-Detail_wrapped])
+2014-11-21 21:05:54.5982 Debug Registering target fileTarget-Detail: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:05:54.5982 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.5982 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:05:54.5982 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2014-11-21 21:05:54.5982 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2014-11-21 21:05:54.5982 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.6152 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.6152 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.6152 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2014-11-21 21:05:54.6152 Trace  Scanning SimpleLayout ''''
+2014-11-21 21:05:54.6152 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.6152 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.6152 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2014-11-21 21:05:54.6302 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.6302 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:05:54.6302 Debug Setting 'FileTarget.name' to 'fileTarget-FatalDetail'
+2014-11-21 21:05:54.6302 Debug Setting 'FileTarget.fileName' to '${basedir}/logs/${shortdate}/E-BusServer.log'
+2014-11-21 21:05:54.6302 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.6302 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:05:54.6302 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.6452 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:05:54.6452 Debug Setting 'FileTarget.layout' to '${level} ${longdate} ${message} ${event-context:item=requestType} ${event-context:item=requestUrl} ${event-context:item=requestQuerystring} ${event-context:item=requestStatus} ${event-context:item=message}'
+2014-11-21 21:05:54.6452 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.6452 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.6452 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.6452 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:05:54.6452 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.6622 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:05:54.6622 Debug Setting 'EventContextLayoutRenderer.item' to 'requestType'
+2014-11-21 21:05:54.6622 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.6622 Trace Scanning EventContextLayoutRenderer 'Layout Renderer: ${event-context}'
+2014-11-21 21:05:54.6622 Debug Setting 'EventContextLayoutRenderer.item' to 'requestUrl'
+2014-11-21 21:05:54.6622 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.6622 Trace Scanning EventContextLayoutRenderer 'Layout Renderer: ${event-context}'
+2014-11-21 21:05:54.6782 Debug Setting 'EventContextLayoutRenderer.item' to 'requestQuerystring'
+2014-11-21 21:05:54.6782 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.6782 Trace Scanning EventContextLayoutRenderer 'Layout Renderer: ${event-context}'
+2014-11-21 21:05:54.6782 Debug Setting 'EventContextLayoutRenderer.item' to 'requestStatus'
+2014-11-21 21:05:54.6782 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.6782 Trace Scanning EventContextLayoutRenderer 'Layout Renderer: ${event-context}'
+2014-11-21 21:05:54.6912 Debug Setting 'EventContextLayoutRenderer.item' to 'message'
+2014-11-21 21:05:54.6912 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.6912 Trace Scanning EventContextLayoutRenderer 'Layout Renderer: ${event-context}'
+2014-11-21 21:05:54.6912 Debug Setting 'FileTarget.concurrentWrites' to 'true'
+2014-11-21 21:05:54.6912 Debug Setting 'FileTarget.archiveFileName' to '${basedir}/logs/${shortdate}/${level}{#####}.log'
+2014-11-21 21:05:54.6912 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.6912 Trace Scanning BaseDirLayoutRenderer 'Layout Renderer: ${basedir}'
+2014-11-21 21:05:54.6912 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.7082 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2014-11-21 21:05:54.7082 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.7082 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.7082 Debug Setting 'FileTarget.archiveAboveSize' to '10240'
+2014-11-21 21:05:54.7082 Debug Setting 'FileTarget.archiveNumbering' to 'Sequence'
+2014-11-21 21:05:54.7082 Debug Wrapping target 'fileTarget-FatalDetail' with AsyncTargetWrapper and renaming to 'fileTarget-FatalDetail_wrapped
+2014-11-21 21:05:54.7082 Info Adding target AsyncWrapper Target[fileTarget-FatalDetail](File Target[fileTarget-FatalDetail_wrapped])
+2014-11-21 21:05:54.7232 Debug Registering target fileTarget-FatalDetail: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:05:54.7232 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.7232 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:05:54.7232 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2014-11-21 21:05:54.7232 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2014-11-21 21:05:54.7232 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.7232 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.7382 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.7382 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2014-11-21 21:05:54.7382 Trace  Scanning SimpleLayout ''''
+2014-11-21 21:05:54.7382 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.7382 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.7382 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2014-11-21 21:05:54.7382 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.7382 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:05:54.7552 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.7552 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:05:54.7552 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.7552 Trace Scanning NewLineLayoutRenderer 'Layout Renderer: ${newline}'
+2014-11-21 21:05:54.7552 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.7552 Trace Scanning MachineNameLayoutRenderer 'Layout Renderer: ${machinename}'
+2014-11-21 21:05:54.7692 Debug Setting 'MailTarget.name' to 'gmail'
+2014-11-21 21:05:54.7692 Debug Setting 'MailTarget.smtpServer' to 'smtp.gmail.com'
+2014-11-21 21:05:54.7692 Debug Setting 'MailTarget.smtpPort' to '587'
+2014-11-21 21:05:54.7692 Debug Setting 'MailTarget.smtpAuthentication' to 'Basic'
+2014-11-21 21:05:54.7692 Debug Setting 'MailTarget.smtpUsername' to 'tagRameshS@gmail.com'
+2014-11-21 21:05:54.7692 Debug Setting 'MailTarget.smtpPassword' to 'password'
+2014-11-21 21:05:54.7692 Debug Setting 'MailTarget.enableSsl' to 'true'
+2014-11-21 21:05:54.7692 Debug Setting 'MailTarget.from' to 'tagRameshS@gmail.com'
+2014-11-21 21:05:54.7872 Debug Setting 'MailTarget.to' to 'rsubramanian@gfnet.com'
+2014-11-21 21:05:54.7872 Debug Setting 'MailTarget.cc' to 'rsubramanian@geodecisions.com'
+2014-11-21 21:05:54.7872 Debug Wrapping target 'gmail' with AsyncTargetWrapper and renaming to 'gmail_wrapped
+2014-11-21 21:05:54.7872 Info Adding target AsyncWrapper Target[gmail](Mail Target[gmail_wrapped])
+2014-11-21 21:05:54.7872 Debug Registering target gmail: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:05:54.7872 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.7872 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:05:54.8012 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2014-11-21 21:05:54.8012 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2014-11-21 21:05:54.8012 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.8012 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.8012 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.8012 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2014-11-21 21:05:54.8012 Trace  Scanning SimpleLayout ''''
+2014-11-21 21:05:54.8162 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.8162 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.8162 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2014-11-21 21:05:54.8162 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.8162 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:05:54.8162 Debug Setting 'EventLogTarget.name' to 'event1'
+2014-11-21 21:05:54.8162 Debug Setting 'EventLogTarget.layout' to '${level} ${longdate} ${machinename} ${message}'
+2014-11-21 21:05:54.8332 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.8332 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.8332 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.8332 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2014-11-21 21:05:54.8332 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.8332 Trace Scanning MachineNameLayoutRenderer 'Layout Renderer: ${machinename}'
+2014-11-21 21:05:54.8332 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.8492 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2014-11-21 21:05:54.8492 Debug Wrapping target 'event1' with AsyncTargetWrapper and renaming to 'event1_wrapped
+2014-11-21 21:05:54.8492 Info Adding target AsyncWrapper Target[event1](EventLog Target[event1_wrapped])
+2014-11-21 21:05:54.8492 Debug Registering target event1: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:05:54.8492 Debug Setting 'WebServiceTarget.name' to 'wcf2'
+2014-11-21 21:05:54.8492 Debug Setting 'WebServiceTarget.url' to 'http://localhost:8733'
+2014-11-21 21:05:54.8632 Debug Setting 'WebServiceTarget.Protocol' to 'HttpGet'
+2014-11-21 21:05:54.8632 Debug Setting 'WebServiceTarget.methodName' to 'WelcomeAndPublish'
+2014-11-21 21:05:54.8632 Debug Setting 'MethodCallParameter.layout' to '${level}-Subramanian'
+2014-11-21 21:05:54.8632 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.8632 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.8632 Debug Setting 'MethodCallParameter.name' to 'value'
+2014-11-21 21:05:54.8782 Debug Wrapping target 'wcf2' with AsyncTargetWrapper and renaming to 'wcf2_wrapped
+2014-11-21 21:05:54.8782 Info Adding target AsyncWrapper Target[wcf2](WebService Target[wcf2_wrapped])
+2014-11-21 21:05:54.8782 Debug Registering target wcf2: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:05:54.8782 Debug Setting 'WebServiceTarget.name' to 'wcf1'
+2014-11-21 21:05:54.8782 Debug Setting 'WebServiceTarget.url' to 'http://localhost:58631/Service1.svc'
+2014-11-21 21:05:54.8782 Debug Setting 'WebServiceTarget.Protocol' to 'HttpGet'
+2014-11-21 21:05:54.8782 Debug Setting 'WebServiceTarget.methodName' to 'redis'
+2014-11-21 21:05:54.8942 Debug Setting 'MethodCallParameter.layout' to '${level}-Subramanian'
+2014-11-21 21:05:54.8942 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2014-11-21 21:05:54.8942 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.8942 Debug Setting 'MethodCallParameter.name' to 'name'
+2014-11-21 21:05:54.8942 Debug Wrapping target 'wcf1' with AsyncTargetWrapper and renaming to 'wcf1_wrapped
+2014-11-21 21:05:54.8942 Info Adding target AsyncWrapper Target[wcf1](WebService Target[wcf1_wrapped])
+2014-11-21 21:05:54.8942 Debug Registering target wcf1: NLog.Targets.Wrappers.AsyncTargetWrapper
+2014-11-21 21:05:54.9102 Trace ParseRulesElement
+2014-11-21 21:05:54.9102 Info Configured from an XML element in C:\GeoDecisions\EnterpriseServiceBus\Projects\Military\EGIS\EnterpriseServiceBus\Server.Host\bin\Debug\NLog.config...
+2014-11-21 21:05:54.9102 Debug --- NLog configuration dump. ---
+2014-11-21 21:05:54.9102 Debug Targets:
+2014-11-21 21:05:54.9102 Info AsyncWrapper Target[TWCFEbus](File Target[TWCFEbus_wrapped])
+2014-11-21 21:05:54.9252 Info AsyncWrapper Target[fileTarget-Simple](File Target[fileTarget-Simple_wrapped])
+2014-11-21 21:05:54.9252 Info AsyncWrapper Target[fileTarget-Detail](File Target[fileTarget-Detail_wrapped])
+2014-11-21 21:05:54.9252 Info AsyncWrapper Target[fileTarget-FatalDetail](File Target[fileTarget-FatalDetail_wrapped])
+2014-11-21 21:05:54.9252 Info AsyncWrapper Target[gmail](Mail Target[gmail_wrapped])
+2014-11-21 21:05:54.9252 Info AsyncWrapper Target[event1](EventLog Target[event1_wrapped])
+2014-11-21 21:05:54.9252 Info AsyncWrapper Target[wcf2](WebService Target[wcf2_wrapped])
+2014-11-21 21:05:54.9252 Info AsyncWrapper Target[wcf1](WebService Target[wcf1_wrapped])
+2014-11-21 21:05:54.9412 Debug Rules:
+2014-11-21 21:05:54.9412 Info logNamePattern: (GeoDecisions.Esb.Server.:StartsWith) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ wcf2 ]
+2014-11-21 21:05:54.9412 Info logNamePattern: (GeoDecisions.Esb.Server.:StartsWith) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ TWCFEbus ]
+2014-11-21 21:05:54.9412 Info logNamePattern: (GeoDecisions.Esb.Server.:StartsWith) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ fileTarget-Simple ]
+2014-11-21 21:05:54.9412 Info logNamePattern: (GeoDecisions.Esb.Server.:StartsWith) levels: [ ] appendTo: [ fileTarget-Detail ]
+2014-11-21 21:05:54.9412 Info logNamePattern: (:All) levels: [ ] appendTo: [ fileTarget-FatalDetail ]
+2014-11-21 21:05:54.9562 Debug --- End of NLog configuration dump ---
+2014-11-21 21:05:54.9562 Info Watching path 'C:\GeoDecisions\EnterpriseServiceBus\Projects\Military\EGIS\EnterpriseServiceBus\Server.Host\bin\Debug' filter 'NLog.config' for changes.
+2014-11-21 21:05:54.9562 Trace FindReachableObject<System.Object>:
+2014-11-21 21:05:54.9562 Trace Scanning LoggingRule 'logNamePattern: (GeoDecisions.Esb.Server.:StartsWith) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ wcf2 ]'
+2014-11-21 21:05:54.9562 Trace  Scanning AsyncTargetWrapper 'AsyncWrapper Target[wcf2](WebService Target[wcf2_wrapped])'
+2014-11-21 21:05:54.9722 Trace   Scanning WebServiceTarget 'WebService Target[wcf2_wrapped]'
+2014-11-21 21:05:54.9722 Trace    Scanning MethodCallParameter 'NLog.Targets.MethodCallParameter'
+2014-11-21 21:05:54.9722 Trace     Scanning SimpleLayout ''${level}-Subramanian''
+2014-11-21 21:05:54.9722 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2014-11-21 21:05:54.9722 Trace      Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2014-11-21 21:05:55.4902 Trace Scanning LoggingRule 'logNamePattern: (GeoDecisions.Esb.Server.:StartsWith) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ TWCFEbus ]'
+2014-11-21 21:05:55.4902 Trace  Scanning AsyncTargetWrapper 'AsyncWrapper Target[TWCFEbus](File Target[TWCFEbus_wrapped])'
+2014-11-21 21:05:55.4902 Trace   Scanning FileTarget 'File Target[TWCFEbus_wrapped]'

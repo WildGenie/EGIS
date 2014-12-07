@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<EsbConfiguration>
+
+  <transporters>
+    <transporter name="RedisTransporter" enabled="true">
+      <add key="host" value="localhost"></add>
+      <add key="port" value="6379"></add>
+    </transporter>
+
+    <transporter name="WcfTcpTransporter" enabled="true">
+      <add key="host" value="localhost"></add>
+      <add key="port" value="9001"></add>
+    </transporter>
+
+    <transporter name="HttpTransporter" enabled="true">
+      <add key="host" value="localhost"></add>
+      <add key="port" value="9010"></add>
+    </transporter>
+  </transporters>
+
+  <databases>
+    <database name="Mongo" priority="2">
+      <add key="host" value="localhost"></add>
+      <add key="connectStringRemoteHost" value="mongodb://esb:esb@RemoteHost/startDatabase/"></add>
+      <add key="simpleConnectStringWithoutAuth" value="mongodb://localhost"></add>
+      <add key="connectString1" value="mongodb://test2:test2@localhost/test"></add>
+      <add key="connectString" value="mongodb://esb:esb@localhost/ESB"></add>
+      <add key="database" value="test"></add>
+    </database>
+
+    <database name="Oracle" priority="1">
+      <add key="host" value="localhost"></add>
+      <add key="connectString" value="Data Source=IRRIS.DEV; User ID=esb; Password=esb"></add>
+    </database>
+  </databases>
+
+</EsbConfiguration>

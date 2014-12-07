@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>GeoDecisions ESB Admin</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+	
+		<link type="text/css" href="../Content/bootstrap.css" rel="stylesheet"/>
+		<style type="text/css">
+			body {
+				padding-top: 60px;
+				padding-bottom: 40px;
+			}
+		</style>
+		<link type="text/css" href="../Content/bootstrap-responsive.css" rel="stylesheet"/>
+	    <link type="text/css" href="../Content/DataTables-1.9.4/media/css/demo_table.css" rel="stylesheet"/>
+	    <link type="text/css" href="../Content/DataTables-1.9.4/media/css/demo_page.css" rel="stylesheet"/>
+	    <link type="text/css" href="../Content/DataTables-1.9.4/media/css/demo_table_jui.css" rel="stylesheet"/>
+	    <link type="text/css" href="../Content/DataTables-1.9.4/media/css/jquery.dataTables.css" rel="stylesheet"/>
+	    <link type="text/css" href="../Content/DataTables-1.9.4/media/css/jquery.dataTables_themeroller.css" rel="stylesheet"/>
+		
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js" type="text/javascript"> </script>
+		<script src="../Scripts/bootstrap.js" type="text/javascript"></script>
+	    <script src="../Scripts/DataTables-1.9.4/media/js/jquery.dataTables.js" type="text/javascript"></script>
+		
+	</head>
+	
+    <body>
+        
+        <!-- Reference  signalR script and EsbClient.js -->
+        <!-- http://serverip:port/scripts/jquery.signalR.js -->
+        <!--        <script src=@Model.SignalRHost type="text/javascript"></script> -->
+        <!-- http://serverip:port/scripts/Esbclient.js -->
+        <!--        <script src=@Model.ClientScriptLocation type="text/javascript"></script> -->
+
+
+        <!-- Add script to update the page and send messages -->
+        <script type="text/javascript">
+            $(function () {
+                
+                console.log('Remove Subscriber Document is ready');
+
+                var rowCount = $('#tblSubscribers tr').length;
+                //if (rowCount == 1) {
+                //    alert('hide');
+                //    $('#tblSubscribers').hide();
+                //} else {
+                //    alert('show:' + rowCount);
+                //    $('#tblSubscribers').show();
+                //}
+
+                //$('#btnRemoveSubscribe').click(function () {
+                    
+                //    if ($('#txtSubscriberUri').val() != '') {
+                        
+                //        var uriText = escape($('#txtSubscriberUri').val());
+                //        //var uriTextNoSlash = uriText.replace(/\//g, '0123456789');
+                //        //alert(uriTextNoSlash);
+
+
+                //        $.post('/removeSubscriberUri', { uri: uriText }, function (data) {
+                //            //console.log('Step-1');
+                //            document.location.reload(true);
+                //        }, 'json');
+
+                //        //$.ajax({
+                //        //    url: '/removeSubscriberUri',
+                //        //    type: "POST",
+                //        //    data: JSON.stringify({ uri: uriText }),
+                //        //    dataType: "json",
+                //        //    contentType: "application/json; charset=utf-8",
+                //        //    success: function () {
+                //        //        console.log('Step-1');
+                //        //        document.location.reload(true);
+                //        //    }
+                //        //});
+                        
+                    
+                        
+                //        //$.get('/removeSubscriberUri/' + uriTextNoSlash, function (data) {
+                //        //    console.log('Step-1');
+                //        //    document.location.reload(true);
+                //        //    //window.location = data;
+                //        //    //document.open();
+                //        //    //document.write(data);
+                //        //    //console.log(data);
+                //        //    //$.location.href = '/removeSubscribers';
+                //        //});
+
+                //        console.log('Step-2');
+                        
+                //    } //if
+                    
+                //}); //click
+
+                //clear text box and reset focus for next remove subscribeUri
+                $('#txtSubscriberUri').val('').focus();
+
+            });
+
+            $(document).ready(function() {
+                $('#tblSubscribers').dataTable({
+                    "iDisplayLength": 5
+                });
+            });
+
+        </script>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="#">Enterprise Service Bus</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="/esb">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li class="nav-header">Nav header</li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form pull-right">
+                            <input class="span2" type="text" placeholder="Email">
+                            <input class="span2" type="password" placeholder="Password">
+                            <button type="submit" class="btn">Sign in</button>
+                        </form>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+		
+        <div class="container">
+
+            <!-- Main hero unit for a primary marketing message or call to action -->
+            <div class="hero-unit">
+                <h2>Remove unwanted ESB subscribers</h2>
+                <p>This removes subscription channel from the current server subscription list</p>
+             </div>
+
+            <div class="row">
+                <div class="span8">
+                    <table id="tblSubscribers">  
+                        <thead>  
+                            <tr>  
+                                <th>Subscriber Id</th>  
+                                <th>Machine Name</th>  
+                                <th>Client Id</th>  
+                            </tr>
+                        </thead>
+
+                        <tbody>  
+                            @Each.subscribers
+                            <tr>
+                                <td>@Current.Uri</td>
+                                <td>@Current.MachineName</td>
+                                <td>@Current.ClientId</td>
+                            </tr>
+                            @EndEach
+                        </tbody>  
+                    </table>  
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="span8">
+                    <hr/><br/>
+                </div>
+            </div>
+            
+            <form id="removeSubs" action="removeSubscriberUri" method="POST">
+                
+                <div class="row">
+                    <div class="span10">
+                        <strong>Enter the subscriber channel to be removed from the ESB server</strong> <br />
+                        <input type="text" id="txtSubscriberUri" name="uri" /><br/>
+                        Eg: author/Category/MessageName <br /><br />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="span10">
+                       <!-- <p><a href="#" id="btnRemoveSubscribe" class="btn btn-primary btn-large" >Remove Subscribers</a></p>-->
+                       <p><button id="A1" class="btn btn-primary btn-large" type="submit">Remove Subscribers</button></p>
+                    </div>
+
+`                   <!--<div class="span4">
+                        <p><a href="/subscribers"  id="btnLookupSubscribers" class="btn btn-primary btn-large">Lookup active subscriber channels</a></p>
+                    </div>-->
+                </div>
+            </form>
+
+            <footer>
+                <p>GeoDecisions &copy; Company 2013</p>
+            </footer>
+        </div> <!-- /container -->
+
+
+	  
+    </body>
+</html>

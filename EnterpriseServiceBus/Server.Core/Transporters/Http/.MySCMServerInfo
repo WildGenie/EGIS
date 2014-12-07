@@ -1,0 +1,7 @@
+SCMBranch=Military
+SCMRepository=Military/EGIS/EnterpriseServiceBus/Server.Core/Transporters/Http
+SCMMainlineUUID={13d5476a-f83f-424e-98c8-a0d8ee21df58}
+SCMBranchRepositoryID=522867
+CustomContractResolver.cs;3642628422;2;1373660976;|240172|512010
+ClientTestPage.html;1921418898;2;1374597403;|240173|512388
+HttpTransporter.cs;823487557;11;1375969204;|240171|515260

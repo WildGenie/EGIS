@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>ESB Admin - Restart Server</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+	
+        <link type="text/css" href="../Content/bootstrap.css" rel="stylesheet"/>
+        <style type="text/css">
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link type="text/css" href="../Content/bootstrap-responsive.css" rel="stylesheet"/>
+        <link type="text/css" href="../Content/DataTables-1.9.4/media/css/demo_table.css" rel="stylesheet"/>
+        <link type="text/css" href="../Content/DataTables-1.9.4/media/css/demo_page.css" rel="stylesheet"/>
+        <link type="text/css" href="../Content/DataTables-1.9.4/media/css/demo_table_jui.css" rel="stylesheet"/>
+        <link type="text/css" href="../Content/DataTables-1.9.4/media/css/jquery.dataTables.css" rel="stylesheet"/>
+        <link type="text/css" href="../Content/DataTables-1.9.4/media/css/jquery.dataTables_themeroller.css" rel="stylesheet"/>
+		
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js" type="text/javascript"> </script>
+        <script src="../Scripts/bootstrap.js" type="text/javascript"></script>
+        <script src="../Scripts/DataTables-1.9.4/media/js/jquery.dataTables.js" type="text/javascript"></script>
+        
+        
+        <style>
+            
+            .btn-primary-red {
+              color: #ffffff;
+              text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+              background-color: #ff0000;
+              *background-color: #ff0000;
+              background-image: -moz-linear-gradient(top, #fa8072, #ff0000);
+              background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fa8072), to(#ff0000));
+              background-image: -webkit-linear-gradient(top, #fa8072, #ff0000);
+              background-image: -o-linear-gradient(top, #fa8072, #ff0000);
+              background-image: linear-gradient(to bottom, #fa8072, #ff0000);
+              background-repeat: repeat-x;
+              border-color: #0044cc #0044cc #002a80;
+              border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+              filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+            }
+        </style>
+    </head>
+
+	<body>
+	    <script type="text/javascript">
+    	    $(function () {
+                
+    	        //console.log('Remove Client Document is ready');
+
+    	        //$('#btnStart').disabled = true;
+    	        $('#btnStart').attr("disabled", "disabled");
+    	        
+    	        var rowCount = $('#tblSubscribers tr').length;
+              
+    	        //$('#btnRemoveSubscribe').click(function () {
+                    
+    	        //        $.post('/removeSubscriberUri', { uri: uriText }, function (data) {
+    	        //            //console.log('Step-1');
+    	        //            document.location.reload(true);
+    	        //        }, 'json');
+
+    	        //        //$.ajax({
+    	        //        //    url: '/removeSubscriberUri',
+    	        //        //    type: "POST",
+    	        //        //    data: JSON.stringify({ uri: uriText }),
+    	        //        //    dataType: "json",
+    	        //        //    contentType: "application/json; charset=utf-8",
+    	        //        //    success: function () {
+    	        //        //        console.log('Step-1');
+    	        //        //        document.location.reload(true);
+    	        //        //    }
+    	        //        //});
+                        
+                    
+                        
+    	        //        //$.get('/removeSubscriberUri/' + uriTextNoSlash, function (data) {
+    	        //        //    console.log('Step-1');
+    	        //        //    document.location.reload(true);
+    	        //        //    //window.location = data;
+    	        //        //    //document.open();
+    	        //        //    //document.write(data);
+    	        //        //    //console.log(data);
+    	        //        //    //$.location.href = '/removeSubscribers';
+    	        //        //});
+
+    	        //        console.log('Step-2');
+                        
+    	        //    } //if
+                    
+    	        //}); //click
+
+    	        //clear text box and reset focus for next remove subscribeUri
+    	        $('#txtSubscriberUri').val('').focus();
+
+    	    });
+            
+    	</script>
+        
+	    <div class="navbar navbar-inverse navbar-fixed-top">
+	        <div class="navbar-inner">
+	            <div class="container">
+	                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	                <a class="brand" href="#">Enterprise Service Bus</a>
+	                <div class="nav-collapse collapse">
+	                    <ul class="nav">
+	                        <li class="active"><a href="/esb">Home</a></li>
+	                        <li><a href="#about">About</a></li>
+	                        <li><a href="#contact">Contact</a></li>
+	                        <li class="dropdown">
+	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+	                            <ul class="dropdown-menu">
+	                                <li><a href="#">Action</a></li>
+	                                <li><a href="#">Another action</a></li>
+	                                <li><a href="#">Something else here</a></li>
+	                                <li class="divider"></li>
+	                                <li class="nav-header">Nav header</li>
+	                                <li><a href="#">Separated link</a></li>
+	                                <li><a href="#">One more separated link</a></li>
+	                            </ul>
+	                        </li>
+	                    </ul>
+	                    <form class="navbar-form pull-right">
+	                        <input class="span2" type="text" placeholder="Email">
+	                        <input class="span2" type="password" placeholder="Password">
+	                        <button type="submit" class="btn">Sign in</button>
+	                    </form>
+	                </div><!--/.nav-collapse -->
+	            </div>
+	        </div>
+	    </div>
+        
+        
+         <div class="container">
+
+            <!-- Main hero unit for a primary marketing message or call to action -->
+            <div class="hero-unit">
+                 <h2>This allows you to restart the Enterprise Service Bus Server.</h2>
+        <p>Doing this will invalidate all current client and connections to the server.  Please use this with caution.</p>
+       
+             </div>
+
+            <div class="row">
+                <div class="span10">
+                    <table id="tblClients">  
+                        <thead>  
+                            <tr>  
+                                <th>Time</th>  
+                                <th>Message</th>  
+                            </tr>
+                        </thead>
+
+                        <tbody>  
+                            @Each.clients
+                            <tr>
+                                <td>@Current.Id</td>
+                                <td>@Current.Name</td>
+                                <td>@Current.Description</td>
+                                <td>@Current.LastPulse</td>
+                            </tr>
+                            @EndEach
+                        </tbody>  
+                    </table>  
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="span8">
+                    <hr/><br/>
+                </div>
+            </div>
+            
+           
+                <div class="row">
+                    <div class="span10">
+                        <form id="restartESB" action="restartServer" method="POST">
+                            <p><button id="btnRestart" class="btn btn-primary-red btn-large" type="submit">Restart Server</button></p>
+                        </form>
+                    </div>
+                    <div class="span10">
+                        <form id="Form1" action="stopServer" method="POST">
+                            <p><button id="btnStop" class="btn btn-primary-red btn-large" type="submit">Stop Server</button></p>
+                        </form>
+                    </div>
+                     <div class="span10">
+                        <form id="Form2" action="startServer" method="POST">
+                            <p><button id="btnStart" class="btn btn-primary-red btn-large" type="submit">Start Server</button></p>
+                        </form>
+                    </div>
+                </div>
+           
+             
+
+             <footer>
+                <p>GeoDecisions &copy; Company 2013</p>
+            </footer>
+        </div> <!-- /container -->
+
+
+	 
+
+	</body>
+</html>

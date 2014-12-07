@@ -1,0 +1,7 @@
+SCMBranch=Military
+SCMRepository=Military/EGIS/EnterpriseServiceBus/Client.Core/Storage
+SCMMainlineUUID={13d5476a-f83f-424e-98c8-a0d8ee21df58}
+SCMBranchRepositoryID=476718
+SQLiteStore.cs;2013659962;5;1371847887;|215188|498300
+ClientStorageManager.cs;315427262;5;1372079145;|215189|498304
+IClientStore.cs;1045936716;3;1372079179;|215190|498230

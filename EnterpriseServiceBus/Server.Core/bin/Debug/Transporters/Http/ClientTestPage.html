@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+    
+        <script src="/Files/Scripts/json2.js" type="text/javascript"> </script>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js" type="text/javascript"> </script>
+        <script src="/Files/Scripts/jquery.signalR.js" type="text/javascript"> </script>
+        <script src="/Files/Scripts/EsbClient.js" type="text/javascript"> </script>
+    
+        <script>
+            $(document).ready(function() {
+                console.log('ready... running timed load test (http publish)');
+
+                var bus = new esb.Client('localhost', 9912, {
+                    // called when the bus is ready for use...  this is another option vs. the queuing that would take place in the bus2 instance below...
+                    onReady: function (instance) {
+                       
+                        var count = 0;
+                        var msg = 'Small message test';
+                        bus.Publish('test/http/publishing', (count + ' : ' + msg));
+                        
+                        //set an interval
+                        //setInterval(function() {
+                        //    bus.Publish('test/http/publishing', (count + ' : ' + msg));
+                        //    console.log('iteration: ' + count);
+                        //    count++;
+                        //}, 3000);
+                    }
+                });
+
+       
+                bus.onConnected = function() {
+                    console.log('bus1 Connected');
+                };
+                
+                bus.onDisconnected = function () {
+                    console.log('Disconnected');
+                };
+                
+                var bus2 = new esb.Client('localhost', 9912, {name:'TPClient2', description:'Our test page client number 2'});
+
+                $(window).unload(function () {
+                    bus.Shutdown();
+                    bus2.Shutdown();
+                });
+
+                $(window).bind("beforeunload", function () {
+                    bus.Shutdown();
+                    bus2.Shutdown();
+                    
+                    //create a small delay somehow (for IE)...
+                    return confirm('You sure?');
+                });
+                
+                bus2.onConnected = function () {
+                    console.log('bus2 Connected');
+                };
+
+                bus2.Subscribe('1/2/3', function(obj, raw) {
+                    console.log(obj);
+                }, { ignoreLocal: true });
+
+
+                bus2.Subscribe('1/2/4', function (obj, raw) {
+                    console.log(obj);
+                });
+                
+                bus2.Publish('1/2/4', 'MESSAGE to 41');
+                bus2.Publish('1/2/3', 'MESSAGE to 3');
+                bus2.Publish('1/2/3', 'MESSAGE to 3');
+                bus2.Publish('1/2/3', 'MESSAGE to 3');
+                bus2.Publish('1/2/3', 'MESSAGE to 3');
+                bus2.Publish('1/2/3', 'MESSAGE to 3');
+                bus2.Publish('1/2/3', 'MESSAGE to 3');
+                bus2.Publish('1/2/3', 'MESSAGE to 3');
+                bus2.Publish('1/2/3', 'MESSAGE to 3');
+                bus2.Publish('1/2/3', 'MESSAGE to 3');
+                bus2.Publish('1/2/3', 'MESSAGE to 3');
+                bus2.Publish('1/2/3', 'MESSAGE to 3');
+                bus2.Publish('1/2/3', 'MESSAGE to 3');
+                bus2.Publish('1/2/4', 'MESSAGE to 42');
+            });
+            
+           
+        </script>
+    </body>
+</html>

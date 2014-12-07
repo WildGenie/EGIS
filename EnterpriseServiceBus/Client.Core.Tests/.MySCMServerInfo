@@ -1,0 +1,7 @@
+SCMBranch=Military
+SCMRepository=Military/EGIS/EnterpriseServiceBus/Client.Core.Tests
+SCMMainlineUUID={13d5476a-f83f-424e-98c8-a0d8ee21df58}
+SCMBranchRepositoryID=458211
+Client.Core.Tests.csproj.vspscc;3146372070;1;1365105388;|201603|466364
+packages.config;280952816;1;1367960738;|201610|466371
+Client.Core.Tests.csproj;1404125934;1;1367960738;|201604|466365

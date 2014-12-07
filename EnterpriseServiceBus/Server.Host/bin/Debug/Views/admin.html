@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>GeoDecisions ESB Admin</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+	
+		<link type="text/css" href="../Content/bootstrap.css" rel="stylesheet"/>
+		<style type="text/css">
+			body {
+				padding-top: 60px;
+				padding-bottom: 40px;
+			}
+		</style>
+		<link type="text/css" href="../Content/bootstrap-responsive.css" rel="stylesheet"/>
+		
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js" type="text/javascript"> </script>
+		<script src="../Scripts/bootstrap.js" type="text/javascript"></script>
+		
+	</head>
+	
+    <body>
+        
+        <!-- Reference  signalR script and EsbClient.js -->
+        <!-- http://serverip:port/scripts/jquery.signalR.js -->
+        <script src=@Model.SignalRHost type="text/javascript"></script>
+        <!-- http://serverip:port/scripts/Esbclient.js -->
+        <script src=@Model.ClientScriptLocation type="text/javascript"></script>
+
+
+        <!-- Add script to update the page and send messages -->
+        <script type="text/javascript">
+            $(function () {
+
+
+            });
+
+        </script>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="#">Enterprise Service Bus</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="/esb">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li class="nav-header">Nav header</li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form pull-right">
+                            <input class="span2" type="text" placeholder="Email">
+                            <input class="span2" type="password" placeholder="Password">
+                            <button type="submit" class="btn">Sign in</button>
+                        </form>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+		
+        <div class="container">
+
+            <!-- Main hero unit for a primary marketing message or call to action -->
+            <div class="hero-unit">
+                <h2>ESB Administration Tasks</h2>
+                <ul>
+                    <li>Remove unwanted subscribers</li>
+                    <li>Remove unwanted clients</li>
+                    <li>Restart server</li>
+                    <li>Lookup active transporters and databases priorities</li>
+                    <li>Perform message administration tasks</li>
+                </ul>
+             </div>
+
+            <div class="row">
+                <div class="span4">
+                    <p><a href="/removeSubscribers"  id="btnRemoveSubscribe" class="btn btn-primary btn-large">Remove Subscribers</a></p>
+                </div>
+                <div class="span4">
+                    <p><a href="/removeClients"  id="btnRemoveClients" class="btn btn-primary btn-large">Remove Clients</a></p>
+                </div>
+                <div class="span4">
+                    <p><a href="/restart"  id="btnRestartESB" class="btn btn-primary btn-large">Restart ESB</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span4">
+                    <p><a href="/Transporters"  id="btnTransporters" class="btn btn-primary btn-large">Transporter Info</a></p>
+                </div>
+                <div class="span4">
+                    <p><a href="/Databases"  id="btnDatabases" class="btn btn-primary btn-large">Database Info</a></p>
+                </div>
+                <div class="span4">
+                    <p><a href="/MessageAdmin"  id="btnMessageAdmin" class="btn btn-primary btn-large">Message Admin</a></p>
+                </div>
+            </div>
+
+            <footer>
+                <p>GeoDecisions &copy; Company 2013</p>
+            </footer>
+        </div> <!-- /container -->
+
+
+	  
+    </body>
+</html>

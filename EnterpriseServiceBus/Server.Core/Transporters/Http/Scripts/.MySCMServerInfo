@@ -1,0 +1,7 @@
+SCMBranch=Military
+SCMRepository=Military/EGIS/EnterpriseServiceBus/Server.Core/Transporters/Http/Scripts
+SCMMainlineUUID={13d5476a-f83f-424e-98c8-a0d8ee21df58}
+SCMBranchRepositoryID=522868
+jquery.signalR.js;2259498461;1;1373660976;|240175|512006
+json2.js;1149507214;1;1373660976;|240174|512005
+EsbClient.js;3381924478;6;1374604201;|240176|513388

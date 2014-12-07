@@ -1,0 +1,5 @@
+SCMBranch=Military
+SCMRepository=Military/EGIS/EnterpriseServiceBus/Common/Communications
+SCMMainlineUUID={13d5476a-f83f-424e-98c8-a0d8ee21df58}
+SCMBranchRepositoryID=458196
+EsbSerializationResolver.cs;3136248669;1;1365105388;|201564|466287

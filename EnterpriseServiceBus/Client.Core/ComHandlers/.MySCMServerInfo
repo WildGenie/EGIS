@@ -1,0 +1,8 @@
+SCMBranch=Military
+SCMRepository=Military/EGIS/EnterpriseServiceBus/Client.Core/ComHandlers
+SCMMainlineUUID={13d5476a-f83f-424e-98c8-a0d8ee21df58}
+SCMBranchRepositoryID=461250
+RedisBsComHandler.cs;2960866398;14;1376409553;|227444|516141
+WcfTcpComHandler.cs;179240565;21;1376420920;|201643|516142
+HttpComHander.cs;4050768187;4;1376409561;|240146|516143
+ComHandler.cs;1767773995;2;1376409736;|240169|516144

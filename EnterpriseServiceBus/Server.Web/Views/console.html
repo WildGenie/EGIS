@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>GeoDecisions ESB Console</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+	
+		<link type="text/css" href="../Content/bootstrap.css" rel="stylesheet"/>
+		<style type="text/css">
+			body {
+				padding-top: 60px;
+				padding-bottom: 40px;
+			}
+		</style>
+		<link type="text/css" href="../Content/bootstrap-responsive.css" rel="stylesheet"/>
+		
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js" type="text/javascript"> </script>
+		<script src="../Scripts/bootstrap.js" type="text/javascript"></script>
+
+	    <link type="text/css" href="../Content/DataTables-1.9.4/media/css/demo_table.css" rel="stylesheet"/>
+	    <link type="text/css" href="../Content/DataTables-1.9.4/media/css/demo_page.css" rel="stylesheet"/>
+	    <link type="text/css" href="../Content/DataTables-1.9.4/media/css/demo_table_jui.css" rel="stylesheet"/>
+	    <link type="text/css" href="../Content/DataTables-1.9.4/media/css/jquery.dataTables.css" rel="stylesheet"/>
+	    <link type="text/css" href="../Content/DataTables-1.9.4/media/css/jquery.dataTables_themeroller.css" rel="stylesheet"/>
+		
+	    <script src="../Scripts/DataTables-1.9.4/media/js/jquery.dataTables.js" type="text/javascript"></script>
+
+		
+	</head>
+	
+    <body>
+        
+        <!-- Reference  signalR script and EsbClient.js -->
+        <script src=@Model.JSON2ScriptLocation type="text/javascript"></script>
+        <!-- http://serverip:port/scripts/jquery.signalR.js -->
+        <script src=@Model.SignalRHost type="text/javascript"></script>
+        <!-- http://serverip:port/scripts/Esbclient.js -->
+        <script src=@Model.ClientScriptLocation type="text/javascript"></script>
+
+
+        <!-- Add script to update the page and send messages -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#tblMessage').dataTable({
+                    "iDisplayLength": 10
+                });
+            });
+
+            $(function () {
+
+                console.log('Document ready, establishing connection to client using EsbClient.js');
+                console.log('Starting EsbClient initialization');
+
+                var bus = new esb.Client('@Model.HostName', 9912);
+                console.log('Client Initialized');
+
+                if ($("#tblmessage tr").size() > 0) {
+                    $('#httpMessagesDiv').show();
+                } else {
+                    $('#httpMessagesDiv').hide();
+                }
+
+                $(window).unload(function() {
+                    bus.Shutdown();
+                });
+
+                $(window).bind("beforeunload", function() {
+                    bus.Shutdown();
+                });
+                
+                //Start the connection
+                //$.connection.hub.start().done(function () {
+
+                $('#btnSubscribe').click(function () {
+                    //alert('subscribe called');
+                    bus.Subscribe($('#txtSubscribeUri').val(), function (layerAddMessage, rawEsbmessage) {
+
+                        console.log(layerAddMessage);
+                        console.log(rawEsbmessage);
+                        
+                        //Html encode display name and message
+                        var encodedName = $('<div />').text(rawEsbmessage.publisher.machineName + ' To ' + rawEsbmessage.uri).html();
+                        //alert('encodedName:' + encodedName);
+
+                        if (layerAddMessage.layerName != null) {
+                            //console.log('LayerAddMessage:' + layerAddMessage.layerName + ', ' + layerAddMessage.description);
+                            encodedMsg = $('<div />').text(layerAddMessage.layerName + ', ' + layerAddMessage.description).html();
+                        } else {
+                            //console.log('RawEsbMessage:' + rawEsbmessage.uri + ', ' + rawEsbmessage.payload + ', ' + rawEsbmessage.publisher.machineName + ', ' + rawEsbmessage.publishedDateTime);
+                            encodedMsg = $('<div />').text(rawEsbmessage.payload + ', ' + rawEsbmessage.publisher.machineName + ', ' + rawEsbmessage.publishedDateTime).html();
+                        }
+
+                        var dt = $('#tblMessage').dataTable();
+                        dt.fnAddData({DT_RowClass:'msg', 0: encodedName, 1:encodedMsg}, true);
+
+                        //Add the message to the page.
+                        //$('#discussion').append('<li><strong>' + encodedName
+                        //    + '</strong>:&nbsp; &nbsp;' + encodedMsg + '</li>');
+
+                        if ($("#tblMessage tr").size() > 0) {
+                            $('#httpMessagesDiv').show();
+                        }
+                        else {
+                            $('#httpMessagesDiv').hide();
+                        }
+
+
+                    });
+                    console.log('Subscribtion, ok');
+
+                    //clear text box and reset focus for next subscribe
+                    $('#txtSubscribeUri').val('').focus();
+                });
+
+                $('#btnPublish').click(function () {
+                    //alert('publish called');
+                    bus.Publish($('#txtPublishUri').val(), $('#txtPublishMessage').val());
+                    console.log('Message published, ok');
+
+                    //clear publish uri and message box and reset focus for next comment
+                    $('#txtPublishMessage').val('');
+                    $('#txtPublishUri').val('').focus();
+                });
+
+                $('#btnClear').click(function () {
+
+                    var dt = $('#tblMessage').dataTable();
+                    dt.fnClearTable();
+                    //$('#discussion').empty();
+                    $('#btnClear').hide();
+                });
+
+
+                //});
+
+            });
+
+        </script>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="#">Enterprise Service Bus</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="/esb">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li class="nav-header">Nav header</li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form pull-right">
+                            <input class="span2" type="text" placeholder="Email">
+                            <input class="span2" type="password" placeholder="Password">
+                            <button type="submit" class="btn">Sign in</button>
+                        </form>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+		
+        <div class="container">
+
+            <!-- Main hero unit for a primary marketing message or call to action -->
+            <!--	<div class="hero-unit">
+                	    <h1>Esb Info</h1>
+                	    <p>This is this management/monitoring page for the Esb.</p>
+                	    <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+                	</div>-->
+
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="span4">
+                    <h2>Interactive Console</h2>
+                    <p>Live console for testing the server.  This will publish and recieve real messages.  Please use caution. </p>
+                </div>
+                <div class="span4">
+                </div>
+            </div>
+            <div class="row">
+                <!--<div class="span4">
+                        <textarea id="consoleTxt"></textarea>
+                    </div>-->
+                <div class="span4">
+                    <strong>URI:</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="txtPublishUri"/> <br/>
+                    <strong>Message:</strong> <textarea id="txtPublishMessage"></textarea>
+                    <!-- <input type="button" id="btnPublish" value="Publish" /> -->
+                    <!-- <input type="hidden" id="displayname"/> -->
+                </div>
+
+                <div class="span4">
+                    <strong>URI:</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="txtSubscribeUri"/> <br/>
+                    <!-- <p><a href="/subscribe"  id="btnSubscribe" class="btn btn-primary btn-large">Subscribe</a></p> -->
+                  <div class="span4">
+                  </div>
+                  <div class="span4">
+                      <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="#"  id="btnSubscribe" class="btn btn-primary btn-large">Subscribe</a></p>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <!-- <p><a href="/publish" id="btnPublish" class="btn btn-primary btn-large">Publish</a></> -->
+                    <p><a href="#" id="btnPublish" class="btn btn-primary btn-large">Publish</a></p>
+                </div>
+                <div class="span4">
+                </div>
+            </div>
+
+            <hr>
+            <div id="httpMessagesDiv">
+                <p><strong>Messages to HttpSubscribers</strong></p>
+<!--                <ul id="discussion" title="Message Publications for Http Subscribers">
+                </ul>-->
+                
+                <table id="tblMessage">
+                    <thead>  
+                        <tr>  
+                            <th>From/To</th>  
+                            <th>Message</th>  
+                        </tr>
+                    </thead>
+                </table>  
+                
+
+<!--                <a href="#" id="btnClear" class="btn btn-primary btn-large">Clear Messages</a>-->
+            </div>
+
+            <footer>
+                <p>GeoDecisions &copy; Company 2013</p>
+            </footer>
+
+        </div> <!-- /container -->
+
+
+	  
+    </body>
+</html>

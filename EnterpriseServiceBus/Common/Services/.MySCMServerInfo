@@ -1,0 +1,8 @@
+SCMBranch=Military
+SCMRepository=Military/EGIS/EnterpriseServiceBus/Common/Services
+SCMMainlineUUID={13d5476a-f83f-424e-98c8-a0d8ee21df58}
+SCMBranchRepositoryID=458199
+IAuthService.cs;3327319601;1;1365105388;|201573|466296
+IMetadataService.cs;787721953;1;1365105388;|201570|466293
+ISubscriptionService.cs;1703249616;2;1365529486;|201571|466827
+IBusService.cs;1109624956;10;1376421373;|201572|516146
